@@ -1,0 +1,21 @@
+[project]
+name = "Insanely Mystical Whisper"
+version = "0.1"
+description = "An adaptation of insanely-fast-whisper for mystic.ai MLaaS."
+authors = [
+    {name = "Zakhar Kogan", email = "36503576+zaharkogan@users.noreply.github.com"},
+]
+dependencies = [
+    "torch>=2.1.1",
+    "transformers>=4.36.1",
+    "pipeline-ai>=1.0.26",
+    "optimum>=1.16.0",
+    "accelerate>=0.25.0",
+]
+requires-python = ">=3.10"
+readme = "README.md"
+license = {text = "MIT"}
+
+[tool.pdm.scripts]
+start.cmd = "src/large-v2-detect.py"
+start.env_file = ".env"
