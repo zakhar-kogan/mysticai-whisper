@@ -8,8 +8,6 @@ runtime:
     - pipeline-ai
     - torch
     - transformers
-    - optimum
-    - accelerate
     cuda_version: '11.4'
 accelerators: ["nvidia_l4"]
 accelerator_memory: 10000

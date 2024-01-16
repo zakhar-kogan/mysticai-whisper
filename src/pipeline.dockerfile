@@ -16,7 +16,7 @@ RUN apt-get install -y git
 
 
 # Install python dependencies
-RUN pip install pipeline-ai torch transformers optimum accelerate
+RUN pip install pipeline-ai torch transformers
 
 # Copy in files
 COPY ./ ./

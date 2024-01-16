@@ -2,7 +2,6 @@ from typing import Tuple
 
 import torch
 from transformers import pipeline
-from optimum.bettertransformer import BetterTransformer
 
 from pipeline import Pipeline, Variable, entity, pipe
 from pipeline.objects import File
