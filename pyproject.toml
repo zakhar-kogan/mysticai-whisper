@@ -1,9 +1,9 @@
 [project]
-name = "Insanely Mystical Whisper"
-version = "0.1"
-description = "An adaptation of insanely-fast-whisper for mystic.ai MLaaS."
+name = "mysticai-whisper"
+version = "0.2.0"
+description = "Default template for PDM package"
 authors = [
-    {name = "Zakhar Kogan", email = "36503576+zaharkogan@users.noreply.github.com"},
+    {name = "Zakhar Kogan", email = "36503576+zakhar-kogan@users.noreply.github.com"},
 ]
 dependencies = [
     "torch",
@@ -13,12 +13,14 @@ dependencies = [
     "accelerate",
     "ninja",
     "packaging",
-    "flash-attn"
+    "flash-attn",
 ]
-requires-python = ">=3.10"
+requires-python = "==3.10.*"
 readme = "README.md"
 license = {text = "MIT"}
 
+[tool.pdm]
+package-type = "application"
 [tool.pdm.scripts]
 start.cmd = "src/large-v2-detect.py"
 start.env_file = ".env"
