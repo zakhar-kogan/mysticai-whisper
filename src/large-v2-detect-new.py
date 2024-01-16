@@ -81,26 +81,3 @@ with Pipeline() as builder:
 # Building the pipeline
 
 my_pl = builder.get_pipeline()
-
-# To run locally:
-
-# output = my_pl.run(
-#     File(path="output.mp3", allow_out_of_context_creation=True), ModelKwargs()
-# )
-# print(output)
-
-my_pl_name = f"{login}/{pl}"
-my_env_name = f"{login}/{env}"
-# print(my_pl_name, my_env_name)
-
-# Creating the environment
-
-environments.create_environment(
-    my_env_name,
-    python_requirements=[
-        "torch>=2.1.1",
-        "transformers>=4.36.1",
-        "optimum>=1.16.0",
-        "accelerate>=0.25.0",
-    ],
-)
