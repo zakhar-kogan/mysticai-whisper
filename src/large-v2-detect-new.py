@@ -5,17 +5,8 @@ from transformers import pipeline
 from optimum.bettertransformer import BetterTransformer
 
 from pipeline import Pipeline, Variable, entity, pipe
-from pipeline.cloud import compute_requirements, environments, pipelines
 from pipeline.objects import File
 from pipeline.objects.graph import InputField, InputSchema
-
-# Getting environment variables
-import os
-
-# Initializing environment variables
-login   = os.environ["USERNAME"]
-pl      = os.environ["PIPELINE"]
-env     = os.environ["ENVIRONMENT"]
 
 # Parameters
 class ModelKwargs(InputSchema):
