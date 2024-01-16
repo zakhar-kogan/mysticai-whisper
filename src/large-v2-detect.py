@@ -12,11 +12,6 @@ from pipeline.objects.graph import InputField, InputSchema
 # Getting environment variables
 import os
 
-# Initializing environment variables
-login   = os.environ["USERNAME"]
-pl      = os.environ["PIPELINE"]
-env     = os.environ["ENVIRONMENT"]
-
 # Parameters
 class ModelKwargs(InputSchema):
     batch_size: int | None = InputField(
@@ -50,7 +45,7 @@ class WhisperModel:
             stride_length_s=5,
             device=self.device,
         )
-                
+
     @pipe
     def predict(self, audio_file: File, kwargs: ModelKwargs) -> Tuple[str, list | None]:
         prediction = self.pipe(
@@ -82,12 +77,6 @@ with Pipeline() as builder:
 
 my_pl = builder.get_pipeline()
 
-# To run locally:
-
-# output = my_pl.run(
-#     File(path="output.mp3", allow_out_of_context_creation=True), ModelKwargs()
-# )
-# print(output)
 
 my_pl_name = f"{login}/{pl}"
 my_env_name = f"{login}/{env}"
@@ -104,7 +93,7 @@ environments.create_environment(
         "accelerate>=0.25.0",
     ],
 )
- 
+
 # environments
 
 # # Uploading the pipeline
