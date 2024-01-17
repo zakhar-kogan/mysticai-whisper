@@ -5,7 +5,7 @@
 groups = ["default"]
 strategy = ["cross_platform", "inherit_metadata"]
 lock_version = "4.4.1"
-content_hash = "sha256:b4c986c312deb2c1d36297642051c91d830212b9a30f6d55a574ef99d6cefdc9"
+content_hash = "sha256:680ac3d6dd03c57cdbea38e691fa3ce6fea773560fb8f53ffcfd49ba90be48df"
 
 [[package]]
 name = "accelerate"
@@ -880,6 +880,31 @@ files = [
 ]
 
 [[package]]
+name = "pip"
+version = "23.3.2"
+requires_python = ">=3.7"
+summary = "The PyPA recommended tool for installing Python packages."
+groups = ["default"]
+files = [
+    {file = "pip-23.3.2-py3-none-any.whl", hash = "sha256:5052d7889c1f9d05224cd41741acb7c5d6fa735ab34e339624a614eaaa7e7d76"},
+    {file = "pip-23.3.2.tar.gz", hash = "sha256:7fd9972f96db22c8077a1ee2691b172c8089b17a5652a44494a9ecb0d78f9149"},
+]
+
+[[package]]
+name = "pip-autoremove"
+version = "0.10.0"
+summary = "Remove a package and its unused dependencies"
+groups = ["default"]
+dependencies = [
+    "pip",
+    "setuptools",
+]
+files = [
+    {file = "pip-autoremove-0.10.0.tar.gz", hash = "sha256:1328c6f6ef54b1ea51dd4dd78199d7f8b27c2344e9517fbb4f89edf3bfbb32ba"},
+    {file = "pip_autoremove-0.10.0-py2.py3-none-any.whl", hash = "sha256:093c7d9d73c66c191cbaac159bf32a0b2e7cdbc108f1935dacb5d5e09bee9eca"},
+]
+
+[[package]]
 name = "pipeline-ai"
 version = "2.0.5"
 requires_python = ">=3.10,<4.0"
@@ -1274,6 +1299,17 @@ files = [
     {file = "sentencepiece-0.1.99-cp311-cp311-win32.whl", hash = "sha256:2d95e19168875b70df62916eb55428a0cbcb834ac51d5a7e664eda74def9e1e0"},
     {file = "sentencepiece-0.1.99-cp311-cp311-win_amd64.whl", hash = "sha256:f90d73a6f81248a909f55d8e6ef56fec32d559e1e9af045f0b0322637cb8e5c7"},
     {file = "sentencepiece-0.1.99.tar.gz", hash = "sha256:189c48f5cb2949288f97ccdb97f0473098d9c3dcf5a3d99d4eabe719ec27297f"},
+]
+
+[[package]]
+name = "setuptools"
+version = "69.0.3"
+requires_python = ">=3.8"
+summary = "Easily download, build, install, upgrade, and uninstall Python packages"
+groups = ["default"]
+files = [
+    {file = "setuptools-69.0.3-py3-none-any.whl", hash = "sha256:385eb4edd9c9d5c17540511303e39a147ce2fc04bc55289c322b9e5904fe2c05"},
+    {file = "setuptools-69.0.3.tar.gz", hash = "sha256:be1af57fc409f93647f2e8e4573a142ed38724b8cdd389706a867bb4efcf1e78"},
 ]
 
 [[package]]
