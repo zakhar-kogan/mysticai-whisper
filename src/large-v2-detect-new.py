@@ -43,7 +43,7 @@ class WhisperModel:
         )
 
     @pipe
-    def predict(self, audio_file: File, batch_size: int, return_timestamps: bool) -> Tuple[str, list | None]:
+    def predict(self, audio_file: File, kwargs: ModelKwargs) -> Tuple[str, list | None]:
         prediction = self.pipe(
             str(audio_file.path),
             batch_size=kwargs.batch_size,
