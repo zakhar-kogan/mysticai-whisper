@@ -11,7 +11,7 @@ runtime:
     cuda_version: '11.4'
 accelerators: ["nvidia_l4"]
 accelerator_memory: 10000
-pipeline_graph: large-v2-detect-new:WhisperModel
+pipeline_graph: large-v2-detect-new:my_pl
 pipeline_name: uriel/insane-whisper-v2
 description: null
 readme: null

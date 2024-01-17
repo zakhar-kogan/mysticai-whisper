@@ -21,7 +21,7 @@ RUN pip install pipeline-ai torch transformers
 # Copy in files
 COPY ./ ./
 
-ENV PIPELINE_PATH=large-v2-detect-new:WhisperModel
+ENV PIPELINE_PATH=large-v2-detect-new:my_pl
 ENV PIPELINE_NAME=uriel/insane-whisper-v2
 ENV PIPELINE_IMAGE=uriel/insane-whisper-v2
 
