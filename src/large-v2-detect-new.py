@@ -59,7 +59,7 @@ class WhisperModel:
 
 with Pipeline() as builder:
     audio_file = Variable(File)
-    kwargs = Variable(ModelKwargs)
+    # kwargs = Variable(ModelKwargs)
 
     model = WhisperModel()
 
