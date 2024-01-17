@@ -46,12 +46,12 @@ class WhisperModel:
     def predict(self, audio_file: File, batch_size: int, return_timestamps: bool) -> Tuple[str, list | None]:
         prediction = self.pipe(
             str(audio_file.path),
-            batch_size=batch_size,
-            return_timestamps=return_timestamps,
+            batch_size=kwargs.batch_size,
+            return_timestamps=kwargs.return_timestamps,
         )
 
         full_text: str = prediction["text"]
-        timestamps: list = prediction["chunks"] if return_timestamps else None
+        timestamps: list = prediction["chunks"] if kwargs.return_timestamps else None
 
         return (full_text, timestamps)
 
