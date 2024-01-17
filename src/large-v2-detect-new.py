@@ -63,27 +63,13 @@ with Pipeline() as builder:
         title = "Audio file"
         )
 
-    batch_size = Variable(
-        int | None,
-        default=24,
-        ge=1,
-        le=64,
-        title="Batch Size",
-    )
-
-    return_timestamps = Variable(
-        bool | None,
-        default=False,
-        title="Return Timestamps",
-    )
-
-    # kwargs = Variable(ModelKwargs)
+    kwargs = Variable(ModelKwargs)
 
     model = WhisperModel()
 
     model.load()
 
-    full_text, timestamps = model.predict(audio_file, batch_size, return_timestamps)
+    full_text, timestamps = model.predict(audio_file, kwargs)
 
     builder.output(full_text, timestamps)
 
