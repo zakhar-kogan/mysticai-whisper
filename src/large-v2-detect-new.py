@@ -27,6 +27,7 @@ class WhisperModel:
         ...
 
     @pipe(on_startup=True, run_once=True)
+
     def load(self):
         self.torch_dtype = torch.float16 if torch.cuda.is_available() else torch.float32
         self.device = torch.device(0 if torch.cuda.is_available() else "cpu")
